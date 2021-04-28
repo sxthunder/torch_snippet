@@ -1,3 +1,4 @@
+import time
 from log import Logger
 from torch.utils.tensorboard import SummaryWriter
 from argparse import ArgumentParser
@@ -6,7 +7,7 @@ project_path = ''
 # 定义parser
 parser = ArgumentParser()
 parser.add_argument('-batch_size', default=128, type=int)
-parser.add_argument('-output_name', default=None, type=str)
+parser.add_argument('-output_name', default='', type=str)
 parser.add_argument('-k_fold', default=-1, type=int)
 args = parser.parse_args()
 
